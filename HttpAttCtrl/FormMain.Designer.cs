@@ -54,11 +54,6 @@
             this.panelCurrentAtt = new System.Windows.Forms.Panel();
             this.buttonSetAtt = new System.Windows.Forms.Button();
             this.panelControll = new System.Windows.Forms.Panel();
-            this.textBoxScript = new System.Windows.Forms.TextBox();
-            this.labelScript = new System.Windows.Forms.Label();
-            this.buttonSaveScript = new System.Windows.Forms.Button();
-            this.buttonLoadScript = new System.Windows.Forms.Button();
-            this.buttonEditScript = new System.Windows.Forms.Button();
             this.buttonScript = new System.Windows.Forms.Button();
             this.trackBarAtt = new ColorSlider.ColorSlider();
             this.label8 = new System.Windows.Forms.Label();
@@ -75,15 +70,20 @@
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editScriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startScriptModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopScriptModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editScriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadScriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveScriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLight = new System.Windows.Forms.PictureBox();
             this.WorkerRunScript = new System.ComponentModel.BackgroundWorker();
+            this.loadScriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveScriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonEditScript = new System.Windows.Forms.Button();
+            this.buttonLoadScript = new System.Windows.Forms.Button();
+            this.buttonSaveScript = new System.Windows.Forms.Button();
+            this.labelScript = new System.Windows.Forms.Label();
+            this.textBoxScript = new System.Windows.Forms.TextBox();
             this.panelParams.SuspendLayout();
             this.panelAttList.SuspendLayout();
             this.contextMenuStripAttList.SuspendLayout();
@@ -206,7 +206,7 @@
             this.textBoxCurrentAtt.Name = "textBoxCurrentAtt";
             this.textBoxCurrentAtt.Size = new System.Drawing.Size(72, 68);
             this.textBoxCurrentAtt.TabIndex = 9;
-            this.textBoxCurrentAtt.Text = "5";
+            this.textBoxCurrentAtt.Text = "0";
             this.textBoxCurrentAtt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxCurrentAtt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCurrentAtt_KeyDown);
             // 
@@ -381,70 +381,6 @@
             this.panelControll.Name = "panelControll";
             this.panelControll.Size = new System.Drawing.Size(283, 220);
             this.panelControll.TabIndex = 18;
-            // 
-            // textBoxScript
-            // 
-            this.textBoxScript.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBoxScript.Location = new System.Drawing.Point(79, 34);
-            this.textBoxScript.Name = "textBoxScript";
-            this.textBoxScript.ReadOnly = true;
-            this.textBoxScript.Size = new System.Drawing.Size(163, 20);
-            this.textBoxScript.TabIndex = 27;
-            this.textBoxScript.Text = "No Script";
-            this.textBoxScript.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxScript.Visible = false;
-            // 
-            // labelScript
-            // 
-            this.labelScript.AutoSize = true;
-            this.labelScript.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelScript.Enabled = false;
-            this.labelScript.ForeColor = System.Drawing.Color.White;
-            this.labelScript.Location = new System.Drawing.Point(40, 37);
-            this.labelScript.Name = "labelScript";
-            this.labelScript.Size = new System.Drawing.Size(34, 13);
-            this.labelScript.TabIndex = 9;
-            this.labelScript.Text = "Script";
-            this.labelScript.Visible = false;
-            // 
-            // buttonSaveScript
-            // 
-            this.buttonSaveScript.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.buttonSaveScript.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveScript.Location = new System.Drawing.Point(192, 69);
-            this.buttonSaveScript.Name = "buttonSaveScript";
-            this.buttonSaveScript.Size = new System.Drawing.Size(51, 25);
-            this.buttonSaveScript.TabIndex = 26;
-            this.buttonSaveScript.Text = "Save";
-            this.buttonSaveScript.UseVisualStyleBackColor = false;
-            this.buttonSaveScript.Visible = false;
-            this.buttonSaveScript.Click += new System.EventHandler(this.buttonSaveScript_Click);
-            // 
-            // buttonLoadScript
-            // 
-            this.buttonLoadScript.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.buttonLoadScript.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLoadScript.Location = new System.Drawing.Point(115, 70);
-            this.buttonLoadScript.Name = "buttonLoadScript";
-            this.buttonLoadScript.Size = new System.Drawing.Size(51, 25);
-            this.buttonLoadScript.TabIndex = 25;
-            this.buttonLoadScript.Text = "Load";
-            this.buttonLoadScript.UseVisualStyleBackColor = false;
-            this.buttonLoadScript.Visible = false;
-            this.buttonLoadScript.Click += new System.EventHandler(this.buttonLoadScript_Click);
-            // 
-            // buttonEditScript
-            // 
-            this.buttonEditScript.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.buttonEditScript.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditScript.Location = new System.Drawing.Point(39, 70);
-            this.buttonEditScript.Name = "buttonEditScript";
-            this.buttonEditScript.Size = new System.Drawing.Size(51, 25);
-            this.buttonEditScript.TabIndex = 24;
-            this.buttonEditScript.Text = "Edit";
-            this.buttonEditScript.UseVisualStyleBackColor = false;
-            this.buttonEditScript.Visible = false;
-            this.buttonEditScript.Click += new System.EventHandler(this.buttonEditScript_Click);
             // 
             // buttonScript
             // 
@@ -628,6 +564,13 @@
             this.scriptToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.scriptToolStripMenuItem.Text = "Script";
             // 
+            // editScriptToolStripMenuItem
+            // 
+            this.editScriptToolStripMenuItem.Name = "editScriptToolStripMenuItem";
+            this.editScriptToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
+            this.editScriptToolStripMenuItem.Text = "Edit Script";
+            this.editScriptToolStripMenuItem.Click += new System.EventHandler(this.editScriptToolStripMenuItem_Click);
+            // 
             // startScriptModeToolStripMenuItem
             // 
             this.startScriptModeToolStripMenuItem.Name = "startScriptModeToolStripMenuItem";
@@ -641,27 +584,6 @@
             this.stopScriptModeToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
             this.stopScriptModeToolStripMenuItem.Text = "Stop Script Mode";
             this.stopScriptModeToolStripMenuItem.Click += new System.EventHandler(this.stopScriptModeToolStripMenuItem_Click);
-            // 
-            // editScriptToolStripMenuItem
-            // 
-            this.editScriptToolStripMenuItem.Name = "editScriptToolStripMenuItem";
-            this.editScriptToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
-            this.editScriptToolStripMenuItem.Text = "Edit Script";
-            this.editScriptToolStripMenuItem.Click += new System.EventHandler(this.editScriptToolStripMenuItem_Click);
-            // 
-            // loadScriptToolStripMenuItem
-            // 
-            this.loadScriptToolStripMenuItem.Name = "loadScriptToolStripMenuItem";
-            this.loadScriptToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
-            this.loadScriptToolStripMenuItem.Text = "Load Script";
-            this.loadScriptToolStripMenuItem.Click += new System.EventHandler(this.loadScriptToolStripMenuItem_Click);
-            // 
-            // saveScriptToolStripMenuItem
-            // 
-            this.saveScriptToolStripMenuItem.Name = "saveScriptToolStripMenuItem";
-            this.saveScriptToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
-            this.saveScriptToolStripMenuItem.Text = "Save Script";
-            this.saveScriptToolStripMenuItem.Click += new System.EventHandler(this.saveScriptToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -699,6 +621,84 @@
             // WorkerRunScript
             // 
             this.WorkerRunScript.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WorkerRunScript_DoWork);
+            // 
+            // loadScriptToolStripMenuItem
+            // 
+            this.loadScriptToolStripMenuItem.Name = "loadScriptToolStripMenuItem";
+            this.loadScriptToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
+            this.loadScriptToolStripMenuItem.Text = "Load Script";
+            this.loadScriptToolStripMenuItem.Click += new System.EventHandler(this.loadScriptToolStripMenuItem_Click);
+            // 
+            // saveScriptToolStripMenuItem
+            // 
+            this.saveScriptToolStripMenuItem.Name = "saveScriptToolStripMenuItem";
+            this.saveScriptToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
+            this.saveScriptToolStripMenuItem.Text = "Save Script";
+            this.saveScriptToolStripMenuItem.Click += new System.EventHandler(this.saveScriptToolStripMenuItem_Click);
+            // 
+            // buttonEditScript
+            // 
+            this.buttonEditScript.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.buttonEditScript.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditScript.Location = new System.Drawing.Point(39, 70);
+            this.buttonEditScript.Name = "buttonEditScript";
+            this.buttonEditScript.Size = new System.Drawing.Size(51, 25);
+            this.buttonEditScript.TabIndex = 24;
+            this.buttonEditScript.Text = "Edit";
+            this.buttonEditScript.UseVisualStyleBackColor = false;
+            this.buttonEditScript.Visible = false;
+            this.buttonEditScript.Click += new System.EventHandler(this.buttonEditScript_Click);
+            // 
+            // buttonLoadScript
+            // 
+            this.buttonLoadScript.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.buttonLoadScript.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoadScript.Location = new System.Drawing.Point(115, 70);
+            this.buttonLoadScript.Name = "buttonLoadScript";
+            this.buttonLoadScript.Size = new System.Drawing.Size(51, 25);
+            this.buttonLoadScript.TabIndex = 25;
+            this.buttonLoadScript.Text = "Load";
+            this.buttonLoadScript.UseVisualStyleBackColor = false;
+            this.buttonLoadScript.Visible = false;
+            this.buttonLoadScript.Click += new System.EventHandler(this.buttonLoadScript_Click);
+            // 
+            // buttonSaveScript
+            // 
+            this.buttonSaveScript.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.buttonSaveScript.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveScript.Location = new System.Drawing.Point(192, 69);
+            this.buttonSaveScript.Name = "buttonSaveScript";
+            this.buttonSaveScript.Size = new System.Drawing.Size(51, 25);
+            this.buttonSaveScript.TabIndex = 26;
+            this.buttonSaveScript.Text = "Save";
+            this.buttonSaveScript.UseVisualStyleBackColor = false;
+            this.buttonSaveScript.Visible = false;
+            this.buttonSaveScript.Click += new System.EventHandler(this.buttonSaveScript_Click);
+            // 
+            // labelScript
+            // 
+            this.labelScript.AutoSize = true;
+            this.labelScript.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelScript.Enabled = false;
+            this.labelScript.ForeColor = System.Drawing.Color.White;
+            this.labelScript.Location = new System.Drawing.Point(40, 37);
+            this.labelScript.Name = "labelScript";
+            this.labelScript.Size = new System.Drawing.Size(34, 13);
+            this.labelScript.TabIndex = 9;
+            this.labelScript.Text = "Script";
+            this.labelScript.Visible = false;
+            // 
+            // textBoxScript
+            // 
+            this.textBoxScript.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBoxScript.Location = new System.Drawing.Point(79, 34);
+            this.textBoxScript.Name = "textBoxScript";
+            this.textBoxScript.ReadOnly = true;
+            this.textBoxScript.Size = new System.Drawing.Size(163, 20);
+            this.textBoxScript.TabIndex = 27;
+            this.textBoxScript.Text = "No Script";
+            this.textBoxScript.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxScript.Visible = false;
             // 
             // FormMain
             // 

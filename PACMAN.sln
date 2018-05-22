@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PACMAN", "HttpAttCtrl\PACMAN.csproj", "{993D63BA-0B01-4913-9B63-EAD573D183B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelnetTest", "TelnetTest\TelnetTest.csproj", "{A86FF411-7667-4910-8C96-A44A3F9F86EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{993D63BA-0B01-4913-9B63-EAD573D183B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{993D63BA-0B01-4913-9B63-EAD573D183B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{993D63BA-0B01-4913-9B63-EAD573D183B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{993D63BA-0B01-4913-9B63-EAD573D183B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A86FF411-7667-4910-8C96-A44A3F9F86EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86FF411-7667-4910-8C96-A44A3F9F86EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86FF411-7667-4910-8C96-A44A3F9F86EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86FF411-7667-4910-8C96-A44A3F9F86EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

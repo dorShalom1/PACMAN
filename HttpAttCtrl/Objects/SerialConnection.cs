@@ -14,6 +14,7 @@ namespace PACMAN.Objects
         Parity parity;
         int dataBits;
         StopBits stopBits;
+        public string newLine = "\r";
 
         public SerialConnection(string ComPortName, int BaudRate, Parity Parity, int DataBits, StopBits StopBits)
         {
@@ -26,7 +27,7 @@ namespace PACMAN.Objects
             {
                 serialPort = new SerialPort(comPortName, baudRate, parity, dataBits, stopBits);
                 serialPort.Open();
-                serialPort.NewLine = "\r";
+                serialPort.NewLine = newLine;
             }
             catch (Exception e)
             {
@@ -82,7 +83,7 @@ namespace PACMAN.Objects
                     serialPort = new SerialPort(comPortName, baudRate, parity, dataBits, stopBits);
                     serialPort.Dispose();
                     serialPort.Open();
-                    serialPort.NewLine = "\r";
+                    serialPort.NewLine = newLine;
                     Thread.Sleep(500);
                 }
                 catch (Exception ex)

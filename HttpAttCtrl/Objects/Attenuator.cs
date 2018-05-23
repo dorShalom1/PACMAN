@@ -31,6 +31,7 @@ namespace PACMAN.Objects
         public string getCmd;
         public string setCmd;
         private object mylock = new object();
+        private string ackStr;
         public bool isConnected;
         private bool isWorking;
         private bool IsWorking
@@ -199,10 +200,14 @@ namespace PACMAN.Objects
                         break;
                     case ConnectionTypes.Telnet:
                         telnetCon = new TelnetConnection(ipAddress, int.Parse(port));
+                        telnetCon.newLine = getCmd.Equals("att?") ? "\n" : "\r";
+                        ackStr = getCmd.Equals("att?") ? "1" : "ACK";
                         //timer = new System.Threading.Timer(new System.Threading.TimerCallback(releasePort), null, 120000, 60000);
                         break;
                     case ConnectionTypes.Serial:
                         serialCon = new SerialConnection(comPortName, baudRate, parity, dataBits, stopBits);
+                        serialCon.newLine = getCmd.Equals("att?") ? "\n" : "\r";
+                        ackStr = getCmd.Equals("att?") ? "1" : "ACK";
                         //timer = new System.Threading.Timer(new System.Threading.TimerCallback(releasePort), null, 120000, 60000);
                         break;
                     case ConnectionTypes.Usb:
@@ -309,7 +314,7 @@ namespace PACMAN.Objects
                         startTime = DateTime.Now;
                         telnetCon.WriteLine(string.Format(setCmd, value));
                         stringResponse = telnetCon.Read();
-                        while (!stringResponse.Contains("ACK"))
+                        while (!stringResponse.Contains(ackStr))
                         {
                             stringResponse = telnetCon.Read();
                             diff = DateTime.Now - startTime;
@@ -331,7 +336,7 @@ namespace PACMAN.Objects
                         startTime = DateTime.Now;
                         serialCon.WriteLine(string.Format(setCmd, value));
                         stringResponse = serialCon.Read();
-                        while (!stringResponse.Contains("ACK"))
+                        while (!stringResponse.Contains(ackStr))
                         {
                             stringResponse = serialCon.Read();
                             diff = DateTime.Now - startTime;

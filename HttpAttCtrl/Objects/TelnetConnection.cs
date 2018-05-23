@@ -24,6 +24,7 @@ namespace PACMAN.Objects
         string hostname;
         int port;
         int TimeOutMs = 100;
+        public string newLine = "\r";
 
         public TelnetConnection(string Hostname, int Port)
         {
@@ -42,7 +43,7 @@ namespace PACMAN.Objects
 
         public void WriteLine(string cmd)
         {
-            Write(cmd + "\r");
+            Write(cmd + newLine);
         }
 
         public void Write(string cmd)

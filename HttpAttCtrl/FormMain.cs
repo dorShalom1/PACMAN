@@ -582,6 +582,8 @@ namespace PACMAN
                     status &= att.setAttenuation(attenuation);
                     if (status)
                         activeAttenuators++;
+                    else
+                        att.isConnected = false;
                 }
             }
             if (status && activeAttenuators > 0)
